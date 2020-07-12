@@ -1,6 +1,6 @@
 package lists.linkedList.singlyLinkedList;
 
-public class EmployeeLinkedList {
+public class EmployeeSinglyLinkedList {
     private EmployeeNode head;
     private int sizeOfLinkList = 0;
 

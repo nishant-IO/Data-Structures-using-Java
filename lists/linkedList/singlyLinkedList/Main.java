@@ -7,7 +7,7 @@ public class Main {
         Employee vinay = new Employee("Vinay", "Singh", 3);
         Employee anand = new Employee("Anand", "Singh", 4);
 
-        EmployeeLinkedList list= new EmployeeLinkedList();
+        EmployeeSinglyLinkedList list= new EmployeeSinglyLinkedList();
 
         list.addToFront(nishant);
         list.addToFront(prashant);
