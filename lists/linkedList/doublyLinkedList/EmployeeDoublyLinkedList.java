@@ -19,17 +19,57 @@ public class EmployeeDoublyLinkedList {
         sizeOfLinkList++;
     }
 
+    //for adding elements to the back of the LL
+    public void addToEnd(Employee employee) {
+        EmployeeNode node = new EmployeeNode(employee);
+        node.setPrev(tail);
+        if (tail == null) {
+            head = node;
+        } else {
+            tail.setNext(node);
+        }
+        tail = node;
+        sizeOfLinkList++;
+    }
+
     //for removing nodes from the front
     public EmployeeNode removeFromFront() {
         if (isEmpty())
             return null;
 
         EmployeeNode removeNode = head;
-        head = head.getNext();
+
+        //if there is just one node
+        if (sizeOfLinkList == 1) {
+            tail = null;
+            head = null;
+        } else {
+            head.getNext().setPrev(null);
+            head = head.getNext();
+        }
         sizeOfLinkList--;
         System.out.println("the node getting removed is " + removeNode.toString());
-
         return removeNode;
+    }
+
+    //remove a node from end
+    public EmployeeNode removeFromEnd() {
+        if (isEmpty())
+            return null;
+
+        EmployeeNode removeNode = tail;
+
+        if (sizeOfLinkList == 1) {
+            head = null;
+            tail = null;
+        } else {
+            tail.getPrev().setNext(null);
+            tail = tail.getPrev();
+        }
+        sizeOfLinkList--;
+        System.out.println("the node getting removed is " + removeNode.toString());
+        return removeNode;
+
     }
 
     //To print the LL
@@ -44,8 +84,8 @@ public class EmployeeDoublyLinkedList {
     }
 
     //to return size of LL
-    public int getSize() {
-        return sizeOfLinkList;
+    public void getSize() {
+        System.out.println("\nlist size = " + sizeOfLinkList);
     }
 
     //to check if LL is empty or not
