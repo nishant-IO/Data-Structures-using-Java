@@ -6,17 +6,18 @@ public class Main {
 
         //adding 10 elements so as to trigger our first overflow
         for (int i = 1; i <= 10; i++) {
-            String fname = "A";
-            stack.push(new Employee(fname, i));
+            stack.push(new Employee(Character.toString((char) (64+i)), i));
         }
 
-        System.out.println("\nbefore pop ");
-        System.out.println("\nStack is ");
+        System.out.println("\nStack before pop-");
         stack.printStack();
 
-        stack.push(new Employee("nishant", 11));
+        //this will add a new element and cause an overflow which is dealt with in the push()
+        stack.push(new Employee("Nishant", 11));
+
         System.out.println("\nafter pop ");
         stack.pop();
+
         stack.push(new Employee("random", 11));
         System.out.println("\nStack is ");
         stack.printStack();
