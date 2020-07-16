@@ -18,6 +18,5 @@ public class MainForLL {
 
 
         stack.printStack();
-
     }
 }
