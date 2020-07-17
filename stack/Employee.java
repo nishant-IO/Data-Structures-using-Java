@@ -1,5 +1,7 @@
 package stack;
 
+import java.util.Objects;
+
 public class Employee {
     String firstName;
     int id;
@@ -12,10 +14,6 @@ public class Employee {
         this.firstName = firstName;
     }
 
-
-
-
-
     public int getId() {
         return id;
     }
@@ -27,6 +25,20 @@ public class Employee {
     public Employee(String firstName, int id) {
         this.firstName = firstName;
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee employee = (Employee) o;
+        return getId() == employee.getId() &&
+                getFirstName().equals(employee.getFirstName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFirstName(), getId());
     }
 
     @Override

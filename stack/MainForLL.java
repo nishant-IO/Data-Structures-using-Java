@@ -16,7 +16,6 @@ public class MainForLL {
         System.out.println("called peek()");
         System.out.println(stack.peek());
 
-
         stack.printStack();
     }
 }
