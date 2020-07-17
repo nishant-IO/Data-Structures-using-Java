@@ -42,10 +42,11 @@ public class ArrayStack {
     }
 
     public void search(Employee toBeFound) {
+        boolean found = false;
         if (top == 0) {
             System.out.println("No element present, please enter element First!!!");
         }
-        boolean found = false;
+
         for (int i = top - 1; i >= 0; i--) {
             if (stack[i].equals(toBeFound)) {
                 System.out.println("\n" + toBeFound + "present at index " + i);
@@ -53,9 +54,10 @@ public class ArrayStack {
                 break;
             }
         }
-        if (!found)
+        
+        if (!found) {
             System.out.println("\nDidn't Find " + toBeFound);
-
+        }
     }
 
     public void searchAccFname(String nameToSearch) {
@@ -69,21 +71,8 @@ public class ArrayStack {
         }
         if (!found) {
             System.out.println("Name " + nameToSearch + " Not Found :( ");
-
         }
     }
-
-
-
-
-
-
-
-
-
-    /* for(Employee employee : stack) {
-            if(employee.getFirstName() == )
-        }*/
 
     public void printStack() {
         for (int i = top - 1; i >= 0; i--) {
