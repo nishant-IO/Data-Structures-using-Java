@@ -30,7 +30,7 @@ public class ArrayStack {
             System.out.println("No elements left to pop");
 
         Employee employee = stack[--top];
-        stack[top] = null;
+        //stack[top] = null;
         return employee;
     }
 
@@ -61,14 +61,14 @@ public class ArrayStack {
     public void searchAccFname(String nameToSearch) {
         boolean found = false;
         for (Employee employee : stack) {
-            if (employee.getFirstName() != null && employee.getFirstName() == nameToSearch) {
+            if (employee != null && employee.getFirstName() == nameToSearch) {
                 System.out.println("Found!!!");
                 found = true;
                 break;
             }
         }
         if (!found) {
-            System.out.println("Not Found :( ");
+            System.out.println("Name " + nameToSearch + " Not Found :( ");
 
         }
     }
