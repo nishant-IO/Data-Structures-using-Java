@@ -5,4 +5,5 @@ Here we will be discussing various data structures like-
 Linked List,
 Stack,
 Queue,
-Map
+Map,
+Tree and Graph
