@@ -50,7 +50,7 @@ public class Main {
         if(employeeList.contains(new Employee("Prashant","Singh",288))){
             employeeList.remove(new Employee("Prashant", "Singh", 288));
 
-            employeeList.forEach(employee -> System.out.println(employee));
+            employeeList.forEach(System.out::println);
         }
     }
 }
