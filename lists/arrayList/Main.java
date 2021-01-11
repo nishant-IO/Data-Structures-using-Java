@@ -35,7 +35,7 @@ public class Main {
 
         //to modify an element at a position
         employeeList.set(0, new Employee("Undercover", "Agent", 420));
-        employeeList.forEach(employee -> System.out.println(employee));
+        employeeList.forEach(System.out::println);
 
         //to check the size of the list
         System.out.println("no of employees are " + employeeList.size());
