@@ -22,7 +22,7 @@ public class Main {
         to retrieve all elements pf the list
         Note this is an lambda expression and a normal for loop could also work here
         */
-        employeeList.forEach(employee -> System.out.println(employee));
+        employeeList.forEach(System.out::println);
 
         /*
         using  a normal for loop too retrieve the elements
